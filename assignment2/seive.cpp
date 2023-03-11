@@ -20,8 +20,11 @@ int main (int argc, char *argv[])
     do
     {
         for (long long j = k*k ; j<n ; j+=2*k)
-        {   primes[j>>1]=true;
-        }
+        {   
+            unsigned long long j2 = j >> 1;
+            primes[j>>1]=true;
+        } 
+        
         
         do
         {
