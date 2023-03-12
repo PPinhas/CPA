@@ -15,9 +15,9 @@ int main (int argc, char *argv[])
 
     do
     {
-        for (long long j = k*k ; j<n ; j+=2*k)
+        for (long long j = k*k ; j<n ; j+=2)
         {   
-            primes[j]=true;
+            if(j % k == 0){primes[j] = true;}
         } 
         
         do
@@ -30,6 +30,7 @@ int main (int argc, char *argv[])
     cout << "1 ";
     cout << "2 ";
     for (int i=3; i<n; i+=2)
-        if (!primes[i])
+        if (!primes[i]){
             cout << i << " ";
+        }
 }

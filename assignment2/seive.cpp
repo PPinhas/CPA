@@ -21,7 +21,6 @@ int main (int argc, char *argv[])
     {
         for (long long j = k*k ; j<n ; j+=2*k)
         {   
-            unsigned long long j2 = j >> 1;
             primes[j>>1]=true;
         } 
         
